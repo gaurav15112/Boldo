@@ -1,10 +1,9 @@
 import React from "react";
 import style from "./feat.module.scss";
 import Image from "next/image";
-import artImage from "../../../public/Images/article-Image.svg";
-import pPic from "../../../public/Images/profile-pic.svg";
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
+import artImage from ".././../public/Images/article-Image.svg";
+import pPic from "../../public/Images/profile-pic.svg";
+
 const Featarticle = () => {
   return (
     <>
