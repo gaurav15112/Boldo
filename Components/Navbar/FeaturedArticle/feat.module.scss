@@ -1,0 +1,213 @@
+@import "../../../styles/variables";
+
+.feature {
+  :global .feature {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    &__headng {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &__title {
+        font-family: var(--font-opensans);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        color: $dark-blue;
+      }
+      &__descr {
+        font-family: var(--font-manrope);
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 84px;
+        color: $dark-blue;
+      }
+    }
+    &__article {
+      display: flex;
+      gap: 100px;
+      &__image {
+        max-width: 550px;
+        width: 100%;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__head {
+          display: flex;
+          gap: 12px;
+          .catog {
+            font-family: var(--font-opensans);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 28px;
+            color: $dark-blue;
+          }
+          .date {
+            font-family: var(--font-opensans);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #777777;
+          }
+        }
+        &__about {
+          font-family: var(--font-opensans);
+          font-size: 48px;
+          font-weight: 400;
+          line-height: 72px;
+          color: #000000;
+          margin-bottom: 20px;
+        }
+        &__footer {
+          display: flex;
+          gap: 12px;
+          .image {
+            max-width: 32px;
+
+            img {
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+          .author {
+            font-family: var(--font-opensans);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      &__container {
+        gap: 0px;
+      }
+      &__headng {
+        &__title {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        &__descr {
+          font-size: 27px;
+          line-height: 37px;
+        }
+      }
+      &__article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        &__image {
+          max-width: 350px;
+          width: 100%;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .card {
+          &__head {
+            display: flex;
+            gap: 12px;
+            .catog {
+              font-size: 16px;
+              line-height: 28px;
+            }
+            .date {
+              font-family: var(--font-opensans);
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 28px;
+              color: #777777;
+            }
+          }
+          &__about {
+            font-family: var(--font-opensans);
+            font-size: 31px;
+            font-weight: 400;
+            line-height: 43px;
+            color: #000000;
+            margin-bottom: 20px;
+          }
+          &__footer {
+            display: flex;
+            gap: 12px;
+            .image {
+              max-width: 32px;
+
+              img {
+                width: 100%;
+                object-fit: contain;
+              }
+            }
+            .author {
+              font-family: var(--font-opensans);
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 991px) {
+      &__article {
+        .card {
+          &__about {
+            font-size: 44px;
+            line-height: 57px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      &__headng {
+        margin-bottom: 23px;
+        &__descr {
+          font-size: 23px;
+          line-height: 33px;
+        }
+      }
+      &__article {
+        &__image {
+          img {
+            height: max-content;
+          }
+        }
+
+        .card {
+          &__head {
+            justify-content: center;
+          }
+          &__about {
+            font-size: 29px;
+            line-height: 39px;
+            text-align: center;
+          }
+          &__footer {
+            margin-bottom: 20px;
+          }
+        }
+        &__btn {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
