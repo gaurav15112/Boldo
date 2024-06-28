@@ -7,6 +7,10 @@ import NewsArticle from "@/Components/NewsArticle/NewsArticle";
 import Footer from "@/Components/Footer/Footer";
 import NewsLetter from "@/Components/Newsletter/NewsLetter";
 import Slider from "@/Components/Slider/Slider";
+import About from "@/Components/About/About";
+import Statistics from "@/Components/Statistics/Statistics";
+import OurStory from "@/Components/OurStory/OurStory";
+import Ourteam from "@/Components/Ourteam/Ourteam";
 
 const inter = Inter({ subsets: ["latin"] });
 const manrope = Manrope({ subsets: ["latin"] });
@@ -21,11 +25,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={` ${manrope.className} ${opensans.className}`}>
-        <Navbar />
-        <Featarticle />
-        <NewsArticle />
-        <NewsLetter />
+        <About />
+        <Statistics />
+        <OurStory />
+        <Ourteam />
+        {/* <Navbar /> */}
+        {/* <Featarticle />
+        <NewsArticle /> */}
+        {/* <NewsLetter /> */}
         <Footer />
+        {/* <Statistics /> */}
         {/* <Slider /> */}
       </main>
     </>

@@ -1,0 +1,255 @@
+@import "../../styles/variables";
+.ourteam {
+  padding: 124px 0px;
+  :global .ourteam {
+    &__container {
+      max-width: 901px;
+      width: 100%;
+      margin-inline: auto;
+      padding: 1rem;
+      .head {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-inline: 50px;
+        margin-bottom: 56px;
+        &__title {
+          font-family: var(--font-opensans);
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 32px;
+          text-align: left;
+          color: #777777;
+        }
+        &__subtitle {
+          font-family: var(--font-manrope);
+          font-size: 48px;
+          font-weight: 400;
+          line-height: 72px;
+          text-align: left;
+          color: #000000;
+        }
+        &__description {
+          font-family: var(--font-opensans);
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 32px;
+          text-align: left;
+        }
+      }
+      .team-members {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 75px;
+        &__member {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          margin-bottom: 110px;
+          .image {
+            width: 100%;
+            max-width: 250px;
+            max-height: 250px;
+            border-radius: 24px;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .Name {
+            align-items: flex-start;
+
+            font-family: var(--font-manrope);
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 48px;
+            text-align: left;
+            color: #000000;
+          }
+          .Title {
+            align-items: flex-start;
+
+            font-family: var(--font-opensans);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+            color: #777777;
+          }
+        }
+      }
+      .team-members-group2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 101px;
+        grid-row-gap: 46px;
+
+        &__member {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 24px;
+          width: 100%;
+          max-width: 400px;
+          .Image {
+            width: 100%;
+            max-width: 120px;
+            max-height: 120px;
+            border-radius: 24px;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .About {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 14px 0px;
+            &__name {
+              font-family: var(--font-manrope);
+              font-size: 28px;
+              font-weight: 400;
+              line-height: 48px;
+              text-align: left;
+              color: #000000;
+            }
+            &__position {
+              font-family: var(--font-opensans);
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 32px;
+              text-align: left;
+              color: #777777;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 1rem;
+    :global .ourteam {
+      &__container {
+        padding: 1rem;
+
+        .head {
+          padding: 0px;
+          gap: 12px;
+          margin-bottom: 30px;
+          &__title {
+            font-size: 17px;
+            line-height: 27px;
+          }
+          &__subtitle {
+            font-size: 23px;
+            line-height: 33px;
+          }
+          &__description {
+            font-size: 15px;
+            line-height: 25px;
+          }
+        }
+        .team-members {
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 50px;
+          &__member {
+            gap: 10px;
+            margin-bottom: 40px;
+            justify-content: center;
+            align-items: center;
+            .Name {
+              font-size: 20px;
+              line-height: 30px;
+            }
+            .Title {
+              font-size: 15px;
+              line-height: 25px;
+            }
+          }
+        }
+        .team-members-group2 {
+          grid-column-gap: 50px;
+          grid-row-gap: 30px;
+          &__member {
+            flex-direction: column;
+            gap: 10px;
+
+            .About {
+              gap: 10px;
+              padding: 5px 0px;
+              &__name {
+                font-size: 18px;
+                line-height: 28px;
+              }
+              &__position {
+                font-size: 16px;
+                line-height: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 577px) and (max-width: 992px) {
+    padding: 50px 0px;
+    :global .ourteam {
+      &__container {
+        .head {
+          gap: 11px;
+          margin-bottom: 40px;
+          &__subtitle {
+            font-size: 35px;
+            line-height: 55px;
+          }
+          &__description {
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+        .team-members {
+          grid-column-gap: 41px;
+          grid-template-columns: repeat(2, 1fr);
+          &__member {
+            gap: 10px;
+            margin-bottom: 59px;
+            align-items: center;
+            justify-content: center;
+            .Name {
+              font-size: 26px;
+              line-height: 46px;
+            }
+            .Title {
+              font-size: 18px;
+              line-height: 28px;
+            }
+          }
+        }
+        .team-members-group2 {
+          grid-template-columns: repeat(2, 1fr);
+
+          grid-column-gap: 50px;
+          grid-row-gap: 37px;
+          &__member {
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+          }
+          .About {
+            &__name {
+              font-size: 19px;
+              line-height: 29px;
+            }
+            &__position {
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
