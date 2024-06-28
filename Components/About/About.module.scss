@@ -1,0 +1,76 @@
+@import "../../styles/variables";
+
+.about {
+  background-color: $green;
+  :global .about {
+    &__container {
+      margin-bottom: 96px;
+      .firstDiv {
+      }
+      .secondDiv {
+        margin: 96px 0px;
+        display: flex;
+        align-items: center;
+        &__left {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          .title {
+            font-family: var(--font-opensans);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+            color: $dark-blue;
+          }
+          .description {
+            font-family: var(--font-manrope);
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 72px;
+            text-align: left;
+            color: #000000;
+          }
+        }
+        &__right {
+          width: 50%;
+          .content {
+            padding-right: 45px;
+            font-family: var(--font-opensans);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            text-align: left;
+            color: $dark-blue;
+          }
+        }
+      }
+    }
+    @media (max-width: 1200px) {
+      &__container {
+        margin-bottom: 40px;
+
+        .secondDiv {
+          flex-direction: column;
+          margin: 9px 0;
+          &__left {
+            width: 100%;
+            gap: 8px;
+            .description {
+              font-size: 30px;
+              line-height: 40px;
+            }
+          }
+          &__right {
+            width: 100%;
+            .content {
+              font-size: 13px;
+              line-height: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
